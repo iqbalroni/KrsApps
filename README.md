@@ -25,5 +25,6 @@
 </ul>
 <hr>
 <b>Penutup</b>
+<img src="https://giffiles.alphacoders.com/130/13070.gif" width="300" alt="Laravel Logo">
 <p>Udah Sekian Dari Saya Gitu Ajah Sekian Terimakasih</p>
 
