@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,9 @@ Route::middleware(['auth:web,dosen,mahasiswa'])->group(function(){
         Route::resource('/mahasiswa', MahasiswaController::class);
 
         Route::resource('/admin',UserController::class);
+
+        Route::post('/semester/{id}/aktif',[SemesterController::class,'aktif']);
+        Route::resource('/semester',SemesterController::class);
     });
 
     // dashboard

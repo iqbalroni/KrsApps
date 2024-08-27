@@ -3,7 +3,7 @@ import { Link, usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
 export default function Master({ children }) {
-    const { auth } = usePage().props;
+    const { auth,semester } = usePage().props;
 
     const logoutPage = () => {
         Inertia.post('/logout')
@@ -11,7 +11,7 @@ export default function Master({ children }) {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-                <a class="navbar-brand" href="#">KrsApps</a>
+                <a class="navbar-brand" href="#">KrsApps {semester.smt_aktif}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,6 +43,7 @@ export default function Master({ children }) {
                                     <div class="dropdown-menu">
                                         <Link class="dropdown-item" href="/prodi">Program Studi</Link>
                                         <Link class="dropdown-item" href="/mataKuliah">Mata Kuliah</Link>
+                                        <Link class="dropdown-item" href="/semester">Semester</Link>
                                     </div>
                                 </li>
                             </>

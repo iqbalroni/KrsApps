@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Semester;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Illuminate\Support\Facades\Auth;
@@ -49,7 +50,9 @@ class HandleInertiaRequests extends Middleware
                 'isMahasiswa' => Auth::guard('mahasiswa')->check(),
             ],
 
-            
+            'semester'=>[
+                'smt_aktif' => Semester::where('status_aktif',true)->first()->nama_semester,
+            ],
         ]);
     }
 }
