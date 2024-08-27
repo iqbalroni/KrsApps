@@ -4,27 +4,46 @@
 </p>
 
 [![MasterHead](https://raw.githubusercontent.com/inertiajs/.github/master/LOGO.png)](https://github.com/iqbalroni)
-<hr>
-<b align="center">Code By : Mochammad Iqbal Roni</b>
+
+## Biodata Programmer
+
+<p>Code By : Mochammad Iqbal Roni</p>
+<p>Instagram : <a href="https://www.instagram.com/iqbalronii/">@iqbalronii</a> </p>
 <p>Code Have fun</p>
-<hr>
-<b>Deskripsi :</b>
+
+## Deskripsi
+
 <p align="left">Aplikasi kampus untuk KRS mahasiswa berbasis laravel dan react js digabung menjadi satu (inertia js)
 </p>
-<hr>
-<b>Cara Install</b>
-<ul>
-    <li>Clone dulu yak..</li>
-    <li>setelah itu install vendornyaaa (composer install)</li>
-    <li>Jangan lupa migrate kawand dan hidupkan web servernyaaaa</li>
-    <li>setelah itu lanjut part 2?</li>
-  <li>Install beberapa package JS (JavaScript) Dulu Ya Gais</li>
-  <li>Jalankan di terminal "npm install"</li>
-  <li>Terus Kalo Udah,Jalanin Projectnya "npm run dev"</li>
-    <li>Dan Jangan lupa jalankan "php artisan serve" heheheheh</li>
-</ul>
-<hr>
-<b>Penutup</b>
+
+## Instalasi
+
+1. Clone dulu yak,Clone repository ini:
+    ```bash
+    git clone https://github.com/iqbalroni/KrsApps.git
+    ```
+2. setelah itu install vendornyaaa
+    ```bash
+    composer install
+    ```
+3. Jangan lupa migrate kawand dan hidupkan web servernyaaaa
+4. Lanjut Part 2?
+5. Install beberapa package JS (JavaScript) Dulu Ya Gais :
+   ```bash
+    npm install
+    ```
+6. Terus Kalo Udah,Jalanin Projectnya :
+   ```bash
+    npm run dev
+    ```
+7. Dan Jangan lupa jalankan laravelnya juga heheheheh
+   ```bash
+    php artisan serve
+    ```
+
+
+## Penutup
+
 <img src="https://giffiles.alphacoders.com/130/13070.gif" width="300" alt="Laravel Logo">
 <p>Udah Sekian Dari Saya Gitu Ajah Sekian Terimakasih</p>
 
