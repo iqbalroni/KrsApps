@@ -2,15 +2,19 @@ import { Link, usePage } from '@inertiajs/inertia-react'
 import React from 'react'
 
 export default function Sidebar() {
-    const { auth } = usePage().props;
+    const { auth,profil } = usePage().props;
+
     return (
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                {/* <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div> */}
-                <div class="sidebar-brand-text mx-3">SiakadKampus.Id</div>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-frog"></i>
+                </div>
+                <div class="sidebar-brand-text">
+                    Siakad.JS
+                    <p>{profil.nama_kampus}</p>
+                </div>
             </a>
 
             <hr class="sidebar-divider my-0" />
@@ -37,6 +41,15 @@ export default function Sidebar() {
             }
 
             {auth.isAdmin && <>
+                <div class="sidebar-heading">
+                    Data Profil
+                </div>
+                <li className="nav-item">
+                    <Link class='nav-link' href='/profilKampus'>
+                        <i className='fas fa-building'></i>
+                        <span>Profil Kampus</span>
+                    </Link>
+                </li>
                 <div class="sidebar-heading">
                     Data Master
                 </div>

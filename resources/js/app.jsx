@@ -10,7 +10,7 @@ createInertiaApp({
         return render(<App {...props} />, el);
     },
     progress: {
-        color: '#fff',
+        color: '#303030',
         showSpinner: true,
     }
 });

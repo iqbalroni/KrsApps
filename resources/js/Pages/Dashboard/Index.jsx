@@ -3,7 +3,7 @@ import Master from '../Layout/Master';
 import { usePage } from '@inertiajs/inertia-react';
 
 export default function Index({ data }) {
-    const { auth } = usePage().props;
+    const { auth,profil } = usePage().props;
 
     return (
         <Master>
@@ -13,6 +13,7 @@ export default function Index({ data }) {
                         {auth.isAdmin ? 'ADMINISTRATOR' : auth.isMahasiswa ? 'MAHASISWA' : 'DOSEN'}
                     </div>
                     <br />
+                    <h3 className='font-weight-bold'>{profil.nama_kampus}</h3>
                     Selamat datang {auth.user.name} / {auth.user.email} di dashboard,Aplikasi Penilaian Mahasiswa Berbasis Website
                 </div>
             </div>

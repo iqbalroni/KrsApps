@@ -28,8 +28,7 @@ body {
 
 .navbar {
     background-color: #232E42;
-    padding-left: 170px;
-    padding-right: 170px;
+    padding: 0 30px;
 }
 
 .patern {
@@ -55,4 +54,24 @@ body {
 
 .bg-login .card{
     width: 30%;
+}
+
+
+.logo-upload{
+    width: 100px;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    background-color: #e3e3e3;
+}
+
+.sidebar-brand-text{
+    font-size: 15px;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    p{
+        margin: 0;
+        font-size: 10px;
+        font-weight: 500;
+    }
 }

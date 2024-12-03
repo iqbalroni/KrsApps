@@ -6,20 +6,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\ProfilKampusController;
 use App\Http\Controllers\SemesterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::get('/login', [AuthController::class,'login']);
@@ -32,6 +23,11 @@ Route::middleware(['auth:web,dosen,mahasiswa'])->group(function(){
     Route::get('/listDosen',[DosenController::class,'index']);
 
     Route::middleware(['auth:web'])->group(function(){
+
+        // profil kampus
+        Route::get('/profilKampus',[ProfilKampusController::class,'index'])->name('profilkampus');
+        Route::post('/profilKampus/create',[ProfilKampusController::class,'store']);
+
         // prodi
         Route::resource('/prodi', ProdiController::class);
 
