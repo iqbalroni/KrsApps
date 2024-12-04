@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\ProdiController;
@@ -30,6 +31,9 @@ Route::middleware(['auth:web,dosen,mahasiswa'])->group(function(){
 
         // prodi
         Route::resource('/prodi', ProdiController::class);
+
+        // Informasi
+        Route::resource('/informasi',InformasiController::class);
 
         // dosen
         Route::resource('/dosen',DosenController::class);

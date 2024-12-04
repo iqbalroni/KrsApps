@@ -50,6 +50,12 @@ export default function Sidebar() {
                         <span>Profil Kampus</span>
                     </Link>
                 </li>
+                <li className="nav-item">
+                    <Link class='nav-link' href='/informasi'>
+                        <i className='fas fa-info'></i>
+                        <span>Informasi Akademik</span>
+                    </Link>
+                </li>
                 <div class="sidebar-heading">
                     Data Master
                 </div>

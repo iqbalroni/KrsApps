@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Informasi;
 use App\Models\ProfilKampus;
 use App\Models\Semester;
 use Illuminate\Http\Request;
@@ -55,7 +56,9 @@ class HandleInertiaRequests extends Middleware
                 'smt_aktif' => Semester::where('status_aktif',true)->first()->nama_semester,
             ],
 
-                'profil'=> ProfilKampus::where('id_kampus',1)->first(),
+            'profil'=> ProfilKampus::where('id_kampus',1)->first(),
+
+            'notifikasi'=>Informasi::where('status',1)->get(),
         ]);
     }
 }

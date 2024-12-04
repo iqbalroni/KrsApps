@@ -1,9 +1,10 @@
 import { usePage } from '@inertiajs/inertia-react';
+import moment from 'moment';
 import React from 'react';
 
 
 export default function Navbar() {
-    const { semester, auth } = usePage().props;
+    const { semester, auth, notifikasi } = usePage().props;
     return (
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -14,6 +15,26 @@ export default function Navbar() {
             <div className="btn btn-primary">{semester.smt_aktif}</div>
 
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown no-arrow mx-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-envelope fa-fw"></i>
+                        <span class="badge badge-danger badge-counter">{notifikasi.length}</span>
+                    </a>
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                        <h6 class="dropdown-header">
+                            Informasi Akademik
+                        </h6>
+                        {notifikasi.map((el) => (
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">{el.judul}</div>
+                                    <div class="small text-gray-500">{moment(el.created_at).format('d MMMM YYYY')}</div>
+                                </div>
+                            </a>
+                        ))}
+                        <a class="dropdown-item text-center small text-gray-500" href="#">Lihat Informasi Selengkapnya</a>
+                    </div>
+                </li>
                 <div class="topbar-divider d-none d-sm-block"></div>
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
